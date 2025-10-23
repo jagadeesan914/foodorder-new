@@ -3,6 +3,9 @@ import userModel from "../models/userModel.js";
 import mongoose from "mongoose";
 import { sendEmail } from "../utils/sendEmail.js";
 
+// Read frontend URL from env
+const FRONTEND_URL = process.env.FRONTEND_URL || "https://food-order-web-frontend.onrender.com";
+
 // ================================
 // 🧾 Place Order (User)
 // ================================
@@ -57,6 +60,7 @@ export const placeOrder = async (req, res) => {
                <p><strong>Total:</strong> ₹${order.amount}</p>
                <p><strong>Payment:</strong> ${order.paymentMethod}</p>
                <p><strong>Address:</strong> ${order.address}</p>
+               <p>Track your order: <a href="${FRONTEND_URL}/orders/${order._id}">Click here</a></p>
                <p>We’ll notify you once it’s out for delivery!</p>`,
       });
     }
@@ -135,6 +139,7 @@ export const updateOrderStatus = async (req, res) => {
         subject: "Order Delivered Successfully 🎉",
         html: `<h3>Hi ${order.userId.name || "Customer"},</h3>
                <p>Your order <b>${order._id}</b> has been <b>delivered successfully!</b></p>
+               <p>View your order here: <a href="${FRONTEND_URL}/orders/${order._id}">Click here</a></p>
                <p>We hope you enjoyed your meal. Thank you for choosing Foodic 🍱.</p>`,
       });
     }
@@ -190,6 +195,7 @@ export const deleteOrder = async (req, res) => {
     return res.status(500).json({ success: false, message: "Failed to delete order", error: error.message });
   }
 };
+
 
 
 
