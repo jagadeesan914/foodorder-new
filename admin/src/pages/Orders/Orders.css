@@ -1,0 +1,80 @@
+.orders-page {
+  padding: 30px;
+  background: #fafafa;
+  min-height: 100vh;
+}
+
+.orders-page h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.orders-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.orders-table th,
+.orders-table td {
+  padding: 12px 16px;
+  border-bottom: 1px solid #eee;
+  text-align: left;
+}
+
+.orders-table th {
+  background-color: #f4f4f4;
+  font-weight: 600;
+  color: #444;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.status-btn {
+  padding: 6px 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  color: white;
+  font-size: 13px;
+}
+
+.status-btn.accept {
+  background-color: #4caf50;
+}
+.status-btn.out {
+  background-color: #2196f3;
+}
+.status-btn.deliver {
+  background-color: #9c27b0;
+}
+.status-btn.cancel {
+  background-color: #f44336;
+}
+.delete-btn {
+  background-color: #555;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.loading,
+.error {
+  text-align: center;
+  margin-top: 50px;
+  color: #666;
+}
+
+
+
+
+

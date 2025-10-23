@@ -1,0 +1,153 @@
+/* Footer.css */
+
+.footer-section {
+    background-color: hsl(0, 0%, 99%); 
+    color: #f8f6f6; 
+    padding: 40px 0 20px 0;
+    font-family: Arial, sans-serif;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+/* Header/Logo section */
+.footer-header {
+    display: flex;
+    justify-content: space-between; /* Keeps logo left if other elements were present */
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+/* Styling for the imported logo image */
+.footer-logo-img { /* Changed class from .footer-logo */
+    width: 120px; /* Adjust size as needed */
+    height: auto;
+     /* Optional: if your logo is dark and needs to be white on black */
+}
+
+
+/* Link Columns Container */
+.footer-links-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 30px 0;
+}
+
+.footer-col {
+    flex: 1;
+    min-width: 150px;
+}
+
+.col-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: #d96646;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-col ul li {
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+    text-decoration: none;
+    color: #c92323;
+    font-size: 14px;
+    transition: color 0.2s;
+}
+
+.footer-col ul li a:hover {
+    color: #ffffff;
+}
+
+/* Social Links Column */
+.social-links-col {
+    min-width: 180px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.social-icon { /* Placeholder styles */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #0c0c0c;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* App Download Badges (Styling for imported images) */
+.app-badges {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.app-badge-img { /* New class for imported images */
+    width: 140px; /* Adjust size to match the reference image */
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.app-badge-img:hover {
+    transform: scale(1.05);
+}
+
+
+/* Bottom Section */
+.footer-divider {
+    border-top: 1px solid #333333;
+    margin: 20px 0;
+}
+
+.footer-bottom {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.copyright-text {
+    font-size: 12px;
+    color: #777777;
+    line-height: 1.5;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .footer-links-container {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+    .footer-col {
+        min-width: 40%;
+        margin-bottom: 20px;
+    }
+    .social-links-col {
+        min-width: 100%;
+    }
+    .footer-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}

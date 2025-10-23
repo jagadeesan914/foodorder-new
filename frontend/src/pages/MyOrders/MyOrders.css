@@ -1,0 +1,104 @@
+.my-orders {
+  padding: 40px 8%;
+  background-color: #fafafa;
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+}
+
+.my-orders h2 {
+  font-size: 28px;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.orders-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.order-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+  padding: 24px;
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.order-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+.order-card img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  background: #f4f4f4;
+  border-radius: 10px;
+  padding: 8px;
+}
+
+.order-details {
+  flex: 1;
+}
+
+.order-details p {
+  margin: 6px 0;
+  font-size: 15px;
+  color: #333;
+}
+
+.order-details strong {
+  color: #000;
+}
+
+/* STATUS COLOR HIGHLIGHTS */
+.order-details p:nth-child(1) strong {
+  color: #222;
+}
+
+.order-details p:nth-child(1) {
+  font-weight: 600;
+  color: #0066cc;
+}
+
+/* Payment Status Colors */
+.order-details p:nth-child(2) {
+  font-weight: 500;
+  color: #555;
+}
+
+.order-details p:nth-child(2).paid {
+  color: #1abc9c;
+}
+
+.order-details p:nth-child(2).pending {
+  color: #e67e22;
+}
+
+.order-details p:nth-child(2).failed {
+  color: #e74c3c;
+}
+
+/* Empty State */
+.my-orders p {
+  text-align: center;
+  font-size: 16px;
+  color: #777;
+}
+
+.error {
+  color: #e74c3c;
+  text-align: center;
+  font-weight: 500;
+  margin-top: 20px;
+}
+
+
+

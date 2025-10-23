@@ -1,0 +1,123 @@
+/* Container for the entire section (creates the rounded card background) */
+.download-app-section {
+    padding: 50px 0;
+    /* Adjust margin to center the card and provide vertical spacing */
+    margin: 80px 8%; 
+    background-color: #d46831; /* White background for the card */
+    border: 1px solid #f0f0f0; /* Light border for definition */
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); /* Optional subtle shadow */
+}
+
+/* Inner container for the two columns (Flexbox setup) */
+.download-app-content {
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 50px;
+}
+
+/* --- LEFT COLUMN: Text Content --- */
+.app-text-column {
+    flex: 1;
+    padding-right: 50px;
+}
+
+.app-text-column h1 {
+    font-size: clamp(30px, 4vw, 48px);
+    font-weight: 700;
+    color: #fbfafa;
+    margin-bottom: 10px;
+}
+
+.app-text-column p {
+    font-size: 18px;
+    color: #ebe6e6;
+    margin-bottom: 30px;
+    max-width: 450px;
+}
+
+/* Store Buttons Container */
+.store-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+/* Styling for the imported App Store and Google Play images */
+.store-buttons img.store-badge {
+    /* Ensures the image doesn't exceed a reasonable size */
+    max-width: 150px; 
+    height: auto; /* Maintains aspect ratio */
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.store-buttons img.store-badge:hover {
+    transform: scale(1.05);
+}
+
+/* --- RIGHT COLUMN: Phone Mockup and QR Code --- */
+.app-visual-column {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    height: 500px;
+}
+
+.phone-frame {
+    position: absolute;
+    width: 300px; 
+    height: 500px;
+    /* This border mimics the dark frame of the phone */
+    border: 12px solid #333; 
+    border-radius: 40px;
+    overflow: hidden;
+    background-color: white;
+}
+
+.qr-code-content {
+    /* Positions the inner QR code content relative to the phone frame */
+    position: absolute;
+    top: 50px;
+    width: 80%;
+    left: 10%;
+    text-align: center;
+}
+
+.qr-code-content p {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.qr-image-placeholder {
+    /* Placeholder styles for where the QR code image will go */
+    width: 150px;
+    height: 150px;
+    background-color: #da5c26;
+    margin: 0 auto;
+    border: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Optional: Basic Media Query for responsiveness */
+@media (max-width: 900px) {
+    .download-app-content {
+        flex-direction: column;
+        text-align: center;
+        padding: 0 20px;
+    }
+    .app-text-column {
+        padding-right: 0;
+        margin-bottom: 40px;
+    }
+    .store-buttons {
+        justify-content: center;
+    }
+}
